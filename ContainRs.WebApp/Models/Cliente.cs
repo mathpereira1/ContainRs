@@ -2,16 +2,19 @@
 
 public class Cliente
 {
-    public Cliente(string nome, string email, string cPF)
+    private Cliente(){ }
+
+    public Cliente(string nome, Email email, string cPF)
     {
         Nome = nome;
         Email = email;
         CPF = cPF;
     }
 
+//To Do: aplicar validação no constructor das futuras novas classes CPF, Celular e CEP
     public Guid Id { get; set; }
     public string Nome { get; private set; }
-    public string Email { get; private set; }
+    public Email Email { get; private set; }
     public string CPF { get; private set; }
     public string? Celular { get; set; }
     public string? CEP { get; set; }

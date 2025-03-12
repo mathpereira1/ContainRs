@@ -12,7 +12,9 @@ public class RegistroViewModel
     [Required(ErrorMessage = "Campo obrigatório.")]
     [EmailAddress(ErrorMessage = "E-mail inválido.")]
     public string Email { get; set; }
-
+//Pode surgir a dúvida sobre transformar a propriedade Email para o tipo Email em RegistroViewModel. 
+//No entanto, manteremos essa classe com tipos primitivos, como string, int e boolean, para receber as informações que serão tratadas posteriormente.
+//O importante é que, no domínio, essas informações estejam bem representadas.
     [Display(Name = "CPF (*)", Prompt = "000.000.000-00")]
     [Required(ErrorMessage = "Campo obrigatório.")]
     public string CPF { get; set; }
